@@ -8,6 +8,7 @@ import {
   SiTypescript, SiMongodb, SiPostgresql, 
   SiMysql, SiSpringboot, SiFlask, SiOdoo
 } from 'react-icons/si';
+import { FloatingChatBot } from '../components/ChatBot/FloatingChatBot';
 
 const Home = () => {
   const technologies = [
@@ -132,6 +133,9 @@ const Home = () => {
         </div>
       </motion.div>
     </div>
+
+    {/* Chat Bot Flotante */}
+    <FloatingChatBot />
   </motion.div>
   );
 };

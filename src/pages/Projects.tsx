@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
-import reporte from "../assets/REPORTE DE ESTADIA FINAL ADF.pdf";
+import reportetsu from "../assets/Plataforma web y móvil para administrar solicitudes de recuperación de piezas y refacciones producto de siniestros..pdf";
+import reporteing from "../assets/REPORTE DE ESTADIA FINAL ADF.pdf";
 
 interface Project {
   title: string;
@@ -48,12 +49,12 @@ const Projects = () => {
     {
       title: "Liberación de TSU",
       description: "Documento oficial de liberación de Técnico Superior Universitario.",
-      fileUrl: reporte,
+      fileUrl: reportetsu,
     },
     {
       title: "Liberación de Ingeniería",
       description: "Documento oficial de liberación de Ingeniería.",
-      fileUrl: reporte,
+      fileUrl: reporteing,
     },
   ];
 
