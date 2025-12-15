@@ -57,7 +57,7 @@ export const FloatingChatBot = () => {
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
         onClick={() => setIsOpen(!isOpen)}
-        className="fixed bottom-6 right-6 z-50 w-16 h-16 bg-gradient-to-r from-indigo-500 to-purple-500 
+        className="fixed bottom-6 right-6 z-50 w-14 h-14 bg-gradient-to-r from-indigo-500 to-purple-500 
                  text-white rounded-full shadow-2xl hover:shadow-purple-500/50 
                  flex items-center justify-center transition-all"
       >
@@ -70,7 +70,7 @@ export const FloatingChatBot = () => {
               exit={{ rotate: 180, opacity: 0 }}
               transition={{ duration: 0.2 }}
             >
-              <FaTimes className="text-2xl" />
+              <FaTimes className="text-xl" />
             </motion.div>
           ) : (
             <motion.div
@@ -80,13 +80,13 @@ export const FloatingChatBot = () => {
               exit={{ rotate: -180, opacity: 0 }}
               transition={{ duration: 0.2 }}
             >
-              <FaComments className="text-2xl" />
+              <FaComments className="text-xl" />
             </motion.div>
           )}
         </AnimatePresence>
         
         {/* Indicador de estado */}
-        <div className={`absolute top-0 right-0 w-4 h-4 ${getStatusColor()} rounded-full border-2 border-white`} />
+        <div className={`absolute top-0 right-0 w-3 h-3 ${getStatusColor()} rounded-full border-2 border-white`} />
       </motion.button>
 
       {/* Ventana del chat */}
@@ -97,20 +97,20 @@ export const FloatingChatBot = () => {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 20, scale: 0.95 }}
             transition={{ duration: 0.3 }}
-            className="fixed bottom-24 right-6 z-50 w-96 h-[600px] 
+            className="fixed bottom-20 right-6 z-50 w-80 h-[500px] 
                      bg-white dark:bg-gray-900 rounded-2xl shadow-2xl 
                      border border-gray-200 dark:border-gray-700
                      flex flex-col overflow-hidden"
           >
             {/* Header */}
-            <div className="bg-gradient-to-r from-indigo-500 to-purple-500 p-4 text-white">
+            <div className="bg-gradient-to-r from-indigo-500 to-purple-500 p-3 text-white">
               <div className="flex items-center justify-between">
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center">
-                    <FaRobot className="text-xl" />
+                <div className="flex items-center gap-2">
+                  <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">
+                    <FaRobot className="text-lg" />
                   </div>
                   <div>
-                    <h3 className="font-bold text-lg">Chat Bot</h3>
+                    <h3 className="font-bold text-base">Chat Bot</h3>
                     <div className="flex items-center gap-2 text-xs">
                       <div className={`w-2 h-2 rounded-full ${getStatusColor()}`} />
                       <span>{getStatusText()}</span>
