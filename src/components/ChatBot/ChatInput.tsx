@@ -1,5 +1,6 @@
 import { useState, KeyboardEvent } from 'react';
 import { FaPaperPlane } from 'react-icons/fa';
+import type { IconType } from 'react-icons';
 
 interface ChatInputProps {
   onSendMessage: (message: string) => void;

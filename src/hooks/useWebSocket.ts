@@ -18,7 +18,7 @@ export const useWebSocket = (url?: string): UseWebSocketReturn => {
   const [messages, setMessages] = useState<ChatMessage[]>([]);
   const [status, setStatus] = useState<WebSocketStatus>('connecting');
   const ws = useRef<WebSocket | null>(null);
-  const reconnectTimeout = useRef<NodeJS.Timeout>();
+  const reconnectTimeout = useRef<ReturnType<typeof setTimeout>>();
 
   const connect = useCallback(() => {
     try {
